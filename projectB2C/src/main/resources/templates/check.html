@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    .ratings {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        direction: rtl;
+        text-align: left;
+    }
+
+    .star {
+        position: relative;
+        line-height: 60px;
+        display: inline-block;
+        transition: color 0.2s ease;
+        color: #ebebeb;
+    }
+
+    .star:before {
+        content: '\2605';
+        width: 40px;
+        height: 40px;
+        font-size: 40px;
+    }
+
+
+</style>
+<head>
+    <script >
+        window.onload=function(){
+            let text = document.getElementById("check").textContent;
+            for (i = 0; i < text; i++) {
+                el = document.createElement("li");
+                el.className="star";
+                document.getElementById('MyUl').appendChild(el);
+                let html = document.getElementById("MyUl").innerHTML;
+            }
+        }
+    </script>
+</head>
+<body>
+<i>This text is italic</i>
+<p hidden id="check">3</p>
+<ul id="MyUl">
+
+</ul>
+</body>
+</html>
